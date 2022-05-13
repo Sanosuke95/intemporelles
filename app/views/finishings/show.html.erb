@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @finishing %>
+
+<div>
+  <%= link_to "Edit this finishing", edit_finishing_path(@finishing) %> |
+  <%= link_to "Back to finishings", finishings_path %>
+
+  <%= button_to "Destroy this finishing", @finishing, method: :delete %>
+</div>
