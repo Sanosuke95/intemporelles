@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-center">Liste des Materiaux</h1>
+
+<div class="container">
+  <div class="row">
+  <% @materials.each do |material| %>
+    <div class="col-12 col-md-4">
+    <%= link_to material_path(material) do %>
+      <div class="">
+          <%= image_tag(material.image, :class => "img-fluid", id: "img-custom") %>
+      </div>
+      <h2  class="text-center"><%= material.title %></h2>
+    <% end %>
+    </div>
+  <% end %>  
+  </div>
+</div>
