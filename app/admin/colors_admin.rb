@@ -29,6 +29,7 @@ Trestle.resource(:colors) do
       number_field :price
       check_box_tag :finishing
       file_field :image
+      file_field :pictures, multiple: true
       select :finishing_ids, Finishing.all, { label: "Finishing" }, multiple: true
 
       row do

@@ -3,8 +3,16 @@ Trestle.resource(:finishings) do
     item :finishings, icon: "fa fa-star"
   end
 
-  form dialog: true do |finishing|
-    select :title, { "Color" => "Color::Finishing" }
+  table do
+    column :id
+    column :title
+    column :created_at
+    column :updated_at, header: "Last Updated", align: :center
+    actions
+  end
+
+  form do |finishing|
+    text_field :title
   end
 
   # Customize the table columns shown on the index view.

@@ -21,6 +21,7 @@ Trestle.resource(:materials) do
     text_field :title
     simplemde :description
     file_field :image
+    file_field :pictures, multiple: true
     select :color_ids, Color.all, { label: "Color" }, multiple: true
     row do
       col { datetime_field :updated_at }
