@@ -91,3 +91,4 @@ yarn-debug.log*
 # Ignore all local history of files
 .history
 .ionide
+/config/master.key
