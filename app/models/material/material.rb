@@ -1,3 +1,3 @@
-class Material::Color < Color
+# class Material::Color < Color
     
-end
+# end
