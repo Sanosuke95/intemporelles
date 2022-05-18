@@ -1,14 +1,18 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Materials</h1>
+<h1 class="text-center">Liste des Materiaux</h1>
 
-<div id="materials">
+<div class="container">
+  <div class="row">
   <% @materials.each do |material| %>
-    <%= render material %>
-    <p>
-      <%= link_to "Show this material", material %>
-    </p>
-  <% end %>
+    <div class="col-12 col-md-4">
+    <%= link_to material_path(material) do %>
+      <div class="">
+          <%= image_tag(material.image, :class => "img-fluid", id: "img-custom") %>
+      </div>
+      <h2  class="text-center"><%= material.title %></h2>
+    <% end %>
+    </div>
+  <% end %>  
+  </div>
 </div>
-
-<%= link_to "New material", new_material_path %>

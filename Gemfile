@@ -2,7 +2,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
-gem "rails", "~> 7.0.2", ">= 7.0.2.4"
+gem "rails", "~> 7.0.0"
 gem "sprockets-rails"
 gem "mysql2", "~> 0.5"
 gem "puma", "~> 5.0"
@@ -18,7 +18,23 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem "sassc-rails"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
+gem 'mini_magick', '~> 4.11'
+
+# Dashboard
+gem 'trestle'
+#gem 'trestle-tinymce'
+gem 'trestle-simplemde'
+# gem 'trestle-active_storage', '~> 3.0', '>= 3.0.1'
+
+#theme
+gem 'bootstrap', '~> 5.1.3'
+gem 'jquery-rails'
+gem 'popper_js', '~> 2.9.3'
+
+#user
+gem 'devise'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
