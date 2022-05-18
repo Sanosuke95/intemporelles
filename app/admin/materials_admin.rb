@@ -12,9 +12,9 @@ Trestle.resource(:materials) do
     column :title
     column :description
     column :image
-    column :colors, format: :tags, class: "hidden-xs" do |material|
-      material.colors.map(&:title)
-    end
+    # column :colors, format: :tags, class: "hidden-xs" do |material|
+    #   material.colors.map(&:title)
+    # end
   end
   
   form do |material|
@@ -22,11 +22,11 @@ Trestle.resource(:materials) do
     simplemde :description
     file_field :image
     file_field :pictures, multiple: true
-    select :color_ids, Color.all, { label: "Color" }, multiple: true
-    row do
-      col { datetime_field :updated_at }
-      col { datetime_field :created_at }
-    end
+    # select :color_ids, Color.all, { label: "Color" }, multiple: true
+    # row do
+    #   col { datetime_field :updated_at }
+    #   col { datetime_field :created_at }
+    # end
   end
 
   # By default, all parameters passed to the update and create actions will be
