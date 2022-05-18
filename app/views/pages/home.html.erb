@@ -1,1 +1,50 @@
-<h1>Home</h1>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag('slider/5E8C7347-DA1B-40F4-A9F1025C71646571.jpg', class: "d-block w-100", id: "img-carousel") %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag('slider/26AAFECE-52B2-41A7-97D083EF784383CF.jpg', class: "d-block w-100") %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag('slider/324F22D1-9F29-4F0C-BBDC0D634DF453D9.jpg', class: "d-block w-100") %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag('slider/B183B417-F82B-4B26-9464FA688186BC30.jpg', class: "d-block w-100") %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag('slider/D79B8E03-1EFA-402A-8A5263919C39B404.jpg', class: "d-block w-100") %>
+    </div>
+  </div>
+</div>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="container px-5 my-5">
+            <div class="animate_visible fadeInLeft start_animate animated">
+                <h1 class="text-center">Materiaux</h1>
+                <div class="row">
+                <% @materials.each do |material| %>
+                <div class="col-12 col-md-4">
+                    <%= link_to material_path(material) do %>
+                    <div class="">
+                        <%= image_tag(material.image, :class => "img-fluid", id: "img-custom") %>
+                    </div>
+                    <h2  class="text-center"><%= material.title %></h2>
+                    <% end %>
+                </div>
+                <% end %>
+                </div>     
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+    <h1 class="text-center">Article</h1>
+  </div>
+</div>
+
+
+<%= javascript_include_tag "carousel" %>

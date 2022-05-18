@@ -3,3 +3,8 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "trix"
 import "@rails/actiontext"
+
+//= require popper
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets

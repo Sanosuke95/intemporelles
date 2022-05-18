@@ -1,0 +1,40 @@
+// h1 { 
+//     color: #111; 
+//     font-family: 'Helvetica Neue', sans-serif; 
+//     font-size: 275px; 
+//     font-weight: bold; 
+//     letter-spacing: -1px; 
+//     line-height: 1; 
+// }
+
+.about-custom-back {
+    position: relative;
+    background-image: asset_url("about/slab.jpg");
+    padding: 30px;
+    height: 30em;
+}
+
+.about-inside {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: auto;
+    height: 200px;
+    margin: auto;
+}
+
+h1.about-title {
+    font-style: inherit;
+    font-size: 75px;
+    font-weight: bold;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+p.TextBlock {
+    size: 25px;
+    font-size: 1.2rem;
+}
