@@ -3,9 +3,9 @@ Trestle.resource(:colors) do
     item :colors, icon: "fa fa-adjust"
   end
 
-  collection do
-    model.includes(:finishings)
-  end
+  # collection do
+  #   model.includes(:finishings)
+  # end
 
   table do
     column :id
