@@ -3,9 +3,9 @@ Trestle.resource(:colors) do
     item :colors, icon: "fa fa-adjust"
   end
 
-  collection do
-    model.includes(:finishings)
-  end
+  # collection do
+  #   model.includes(:finishings)
+  # end
 
   table do
     column :id
@@ -13,9 +13,9 @@ Trestle.resource(:colors) do
     column :min
     column :max
     column :price
-    column :finishings, format: :tags, class: "hidden-xs" do |color|
-      color.finishings.map(&:title)
-    end
+    # column :finishings, format: :tags, class: "hidden-xs" do |color|
+    #   color.finishings.map(&:title)
+    # end
     column :created_at
     column :updated_at, header: "Last Updated", align: :center
     actions
@@ -30,7 +30,7 @@ Trestle.resource(:colors) do
       check_box_tag :finishing
       file_field :image
       file_field :pictures, multiple: true
-      select :finishing_ids, Finishing.all, { label: "Finishing" }, multiple: true
+      # select :finishing_ids, Finishing.all, { label: "Finishing" }, multiple: true
 
       row do
         col { datetime_field :updated_at }
