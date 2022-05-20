@@ -1,15 +1,15 @@
 <div id="<%= dom_id material %>">
-  <p>
-    <strong>Title:</strong>
-    <%= material.title %>
-  </p>
 
-  <p class="trix-content">
-    <strong>Description:</strong>
-    <div class="trix-content">
-      <p class="trix-content"><%= material.description %></p>
+  <div class="container marketing">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1"><%= material.title %></h2>
+        <p class="lead trix-content"><%= material.description %></p>
+      </div>
+      <div class="col-md-5">
+        <%= image_tag(material.image, class: "featurette-image img-fluid mx-auto",width: "500", height: "500", role: "img", preserveAspectRatio: "xMidYMid slice", focusable: "false") %>
+      </div>
     </div>
-    
-  </p>
+  </div>
 
 </div>
